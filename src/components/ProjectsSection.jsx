@@ -1,32 +1,37 @@
 import React from "react";
-
+import Project2 from "../ProjectImages/Project2.png";
+import Project1 from "../ProjectImages/Project1.png";
+import Project3 from "../ProjectImages/Project3.png";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
+    title: "ShutterBug - Camera Ecommerce App",
+    description:
+      "A modern eCommerce web application for discovering and purchasing cameras and accessories.",
+    image: Project1,
     tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "https://saas-landing-demo.vercel.app",
-    githubUrl: "https://github.com/username/saas-landing-page",
+    demoUrl: "https://shutterbug-muskan.netlify.app/",
+    githubUrl: "https://github.com/muskanbatra-dev/shutter-bug",
   },
   {
     id: 2,
-    title: "E-Commerce Dashboard",
-    description: "An admin dashboard for managing orders, products, and users.",
-    image: "/projects/project2.png",
+    title: "Lift Simulation",
+    description:
+      "is an interactive web dashboard built to model the operations of an elevator system within a multi-floor building",
+    image: Project2,
     tags: ["React", "Redux", "Chart.js"],
-    demoUrl: "https://ecommerce-dashboard.vercel.app",
-    githubUrl: "https://github.com/username/ecommerce-dashboard",
+    demoUrl: "https://lift-simulations-muskan.netlify.app/",
+    githubUrl: "https://github.com/muskanbatra-dev/liftssimulation",
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    description: "A personal portfolio built with Next.js and TailwindCSS.",
-    image: "/projects/project3.png",
-    tags: ["Next.js", "TailwindCSS", "Framer Motion"],
-    demoUrl: "https://myportfolio.dev",
-    githubUrl: "https://github.com/username/portfolio-site",
+    title: "JSON Tree Visualizer",
+    description:
+      "An interactive web app that validates, visualizes, and searches JSON data using a dynamic tree view. Built with React Flow for graph rendering and supports JSONPath-based search with real-time highlighting.",
+    image: Project3,
+    tags: ["React", "React Flow", "JSONPath", "TailwindCSS"],
+    demoUrl: "https://json-visualiser.netlify.app/",
+    githubUrl: "https://github.com/muskanbatra-dev/json-visualizer",
   },
 ];
 
@@ -43,14 +48,12 @@ const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
               className="group bg-card rounded-lg overflow-hidden border border-[color:var(--color-border)] shadow-xs transition-all duration-300 hover:shadow-lg hover:shadow-[rgba(167,139,250,0.2)]"
             >
-              
               <div className="h-48 overflow-hidden">
                 <img
                   src={project.image}
@@ -59,7 +62,6 @@ const ProjectsSection = () => {
                 />
               </div>
 
-              
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[var(--color-foreground)] mb-2">
                   {project.title}
@@ -68,7 +70,6 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-               
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, idx) => (
                     <span
